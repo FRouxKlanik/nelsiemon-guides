@@ -28,5 +28,13 @@ module.exports = {
         "@assets": path.resolve(__dirname, "src/assets/"),
       },
     },
+    module: {
+      rules: [
+        {
+          test: /\.md/,
+          use: 'raw-loader',
+        }
+      ],
+    },
   },
 };
