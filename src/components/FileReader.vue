@@ -1,18 +1,23 @@
 <template>
     <div>
       <h1>File Reader</h1>
-      <div id="content" v-html="fractals"></div>
+      <div id="content" v-html="pageData"></div>
     </div>
 </template>
 <script>
-import { marked } from 'marked';
-import FractalsMarkdown from '@pages/fractales.md';
+import markdownService from '@services/markdown.service';
 
 export default {
-  computed: {
-    fractals: () => {
-      return marked(FractalsMarkdown);
+  data () {
+    return {
+      pageData: ''
     }
+  },
+  props: {
+    filename: String,
+  },
+  mounted() {
+    this.pageData = markdownService.getMarkdownContent(this.filename);
   }
 }
 </script>
