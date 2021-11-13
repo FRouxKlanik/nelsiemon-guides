@@ -4,6 +4,7 @@ import App from './App.vue';
 import Home from '@components/Home.vue';
 import FileReader from '@components/FileReader.vue'
 import Buefy from 'buefy';
+import "buefy/dist/buefy.css";
 import config from '@config/content.config';
 
 Vue.use(VueRouter);

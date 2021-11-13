@@ -1,8 +1,5 @@
 <template>
-    <div>
-      <h1>File Reader</h1>
-      <div id="content" v-html="pageData"></div>
-    </div>
+  <div class="content" v-html="pageData"></div>
 </template>
 <script>
 import markdownService from '@services/markdown.service';
@@ -21,3 +18,12 @@ export default {
   }
 }
 </script>
+<style scoped> 
+h1 {
+  margin-top: 0px;
+}
+
+.content {
+  padding: 0px 12px 0px 12px;
+}
+</style>
