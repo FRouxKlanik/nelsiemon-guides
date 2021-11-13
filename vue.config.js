@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  publicPath: "/",
+  publicPath: process.env.NODE_ENV === 'production' ? '/guides/' : '/',
   devServer: {
     disableHostCheck: true,
     port: 8080,

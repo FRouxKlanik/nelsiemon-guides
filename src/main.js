@@ -10,6 +10,8 @@ Vue.use(VueRouter);
 Vue.use(Buefy);
 Vue.config.productionTip = false;
 
+const rootPath = process.env.NODE_ENV === 'production' ? '/guides' : '/';
+
 const homeRoute = { path: '/', name: 'home', component: Home };
 
 // Add a new route to the router for each page of the category
@@ -26,12 +28,11 @@ const parseCategory = (currentRoutes, category) => {
 }
 
 const routes = config.reduce(parseCategory, [homeRoute]);
-console.log('Routes');
-console.log(routes);
 
 const router = new VueRouter({
   routes,
-  mode: 'history'
+  mode: 'history',
+  base: rootPath,
 });
 
 new Vue({

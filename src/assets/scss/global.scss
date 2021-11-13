@@ -1,0 +1,19 @@
+$fontColor: #000000;
+$fontFamily: 'Avenir';
+$globalAlign: left;
+$globalTitleAlign: center;
+$globalTopMargin: 60px;
+
+
+#app {
+    font-family: $fontFamily;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: $globalAlign;
+    color: $fontColor;
+    margin-top: $globalTopMargin;
+}
+
+#app h1 {
+    text-align: $globalTitleAlign;
+}
