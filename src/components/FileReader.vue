@@ -14,7 +14,17 @@ export default {
     filename: String,
   },
   mounted() {
-    this.pageData = markdownService.getMarkdownContent(this.filename);
+    this.getMarkdownContent();
+  },
+  methods: {
+    getMarkdownContent() {
+      this.pageData = markdownService.getMarkdownContent(this.filename);
+    }
+  },
+  watch: {
+    filename: function () {
+      this.getMarkdownContent();
+    }
   }
 }
 </script>

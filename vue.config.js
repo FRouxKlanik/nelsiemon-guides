@@ -15,7 +15,7 @@ module.exports = {
         .use("sass-loader")
         .tap((options) =>
           Object.assign(options, {
-            prependData: "@import '@assets/scss/global.scss';",
+            additionalData: "@import '@assets/scss/global.scss';",
           })
         );
     });

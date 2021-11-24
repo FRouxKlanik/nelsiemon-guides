@@ -1,9 +1,13 @@
 <template>
-  <div id="app" class="columns is-multiline">
-    <Header class="column is-full" />
-    <Sidebar class="column is-one-quarter" />    
-    <div class="app_page--content column is-three-quarters">
-      <router-view></router-view>
+  <div id="app">
+    <div class="columns">
+      <Header class="column is-full" />
+    </div>
+    <div class="columns">
+      <Sidebar class="column is-one-quarter" />    
+      <div class="app_page--content column is-three-quarters">
+        <router-view></router-view>
+      </div>
     </div>    
   </div>
 </template>
@@ -18,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 body {
   background-image: url('./assets/img/texture_crystal_background.jpg');
   margin: 0px !important;
